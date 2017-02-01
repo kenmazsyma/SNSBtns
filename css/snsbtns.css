@@ -1,0 +1,50 @@
+.SNSBtns {
+}
+
+.SNSBtns:after {
+	clear:both;
+}
+
+.SNSBtns > div {
+	margin:8px;
+	padding:4px;
+	float:left;
+	background-size:32px;
+	background-repeat:no-repeat;
+	background-position:center center;
+	border-radius:6px;
+	-webkit-box-shadow:2px 2px 3px #bbb;
+	box-shadow:2px 2px 3px #bbb;
+}
+
+.SNSBtns > div:active {
+	-webkit-box-shadow:1px 1px 1px #bbb;
+	box-shadow:1px 1px 1px #bbb;
+	margin:9px 7px 7px 9px;
+}
+
+.SNSBtns > .twitter {
+	background-color:#55acee;
+	background-image:url('../img/twitter.gif')
+}
+
+.SNSBtns > .facebook {
+	background-color:#3a5794;
+	background-image:url('../img/facebook.gif')
+}
+
+.SNSBtns > .gplus {
+	background-color:#dc4a38;
+	background-image:url('../img/gplus.gif')
+}
+
+.SNSBtns > .line {
+	background-color:#1abc04;
+	background-image:url('../img/line.gif')
+}
+
+.SNSBtns > .hatena {
+	background-color:#01a4de;
+	background-image:url('../img/hatena.gif')
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="test.css">
+		<link rel="stylesheet" href="../css/snsbtns.css">
+		<script type="text/javascript">
+		-->
+			window.onload = function() {
+				SNSBtns.init($('#tag1'),
+					{
+						type : ['twitter', 'facebook', 'gplus', 'line', 'hatena'],
+						url : 'http://yahoo.com',
+						text : 'This is sample text.'
+					});
+			}
+		-->
+		</script>
+	</head>
+	<body>
+		<div id="tag1">
+		</div>
+		<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="../js/snsbtns.js"></script>
+	</body>
+</html>
