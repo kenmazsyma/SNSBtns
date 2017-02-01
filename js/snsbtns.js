@@ -3,8 +3,9 @@ SNSBtns = {
 		if (prm.type===undefined) return false;
 		SNSBtns.prm = prm;
 		var d = $(div).addClass('SNSBtns');
-		var w = parseInt(d.width() / prm.type.length)-32;
-		var h = d.height();
+		var w = parseInt(d.width() / prm.type.length)-24;
+		var h = d.height()-24;
+		if ((h<12)||(w<12)) return false;
 		for ( var i in prm.type ) {
 			switch (prm.type[i]) {
 			case 'twitter':
@@ -41,28 +42,28 @@ SNSBtns = {
 		return true;
 	},
 	onTwitter : function() {
-		var url = 'https://twitter.com/intent/tweet?text=' + encodeURI(SNSBtns.prm.text)
-			+ '&url=' + encodeURI(SNSBtns.prm.url) + '&via=moltie&';
+		var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(SNSBtns.prm.text)
+			+ '&url=' + encodeURIComponent(SNSBtns.prm.url) + '&via=moltie&';
 		window.open(url, "share via twitter", "window=800,height=400,scrollbars=no");
 	},
 	onFacebook : function() {
 		var url = 'https://www.facebook.com/sharer/sharer.php?u=' 
-				+ encodeURI(SNSBtns.prm.url);
+				+ encodeURIComponent(SNSBtns.prm.url);
 		window.open(url, "share via facebook", "window=800,height=400,scrollbars=no");
 	},
 	onGplus : function() {
 		var url = 'https://plus.google.com/share?url=' 
-				+ encodeURI(SNSBtns.prm.url);
+				+ encodeURIComponent(SNSBtns.prm.url);
 		window.open(url, "share via facebook", "window=800,height=400,scrollbars=no");
 	},
 	onLine : function() {
 		var url = 'http://line.me/R/msg/text/?' 
-			    + encodeURI(SNSBtns.prm.text + ' - ' + SNSBtns.prm.url);
+			    + encodeURIComponent(SNSBtns.prm.text + ' - ' + SNSBtns.prm.url);
 		window.open(url, "share via line", "scrollbars=yes");
 	},
 	onHatena : function() {
 		var url = 'http://b.hatena.ne.jp/entry/' 
-			    + encodeURI(SNSBtns.prm.url);
+			    + encodeURIComponent(SNSBtns.prm.url);
 		window.open(url, "share via hatena");
 	}
 };
